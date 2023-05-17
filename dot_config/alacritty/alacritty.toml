@@ -1,0 +1,66 @@
+import = [
+       "~/.config/alacritty/themes/themes/dracula.toml"
+]
+
+[bell]
+animation = "EaseOutExpo"
+color = "0xffffff"
+duration = 0
+
+[shell]
+program = "/opt/homebrew/bin/fish"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+# Alacritty configuration file
+
+[window]
+dynamic_padding = false
+dynamic_title = true
+startup_mode = "Windowed"
+
+# Window padding (changes require restart)
+padding = { x = 8, y = 8 }
+
+# Decorations
+decorations = "full"
+
+[font]
+# Font family
+normal = { family = "Fira Code", style = "Regular" }
+bold = { family = "Fira Code", style = "Bold" }
+italic = { family = "Fira Code", style = "Italic" }
+bold_italic = { family = "Fira Code", style = "Bold Italic" }
+size = 14.0
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[debug]
+persistent_logging = false
+render_timer = false

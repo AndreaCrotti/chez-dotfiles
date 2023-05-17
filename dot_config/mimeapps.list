@@ -1,0 +1,20 @@
+[Default Applications]
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/webcal=brave-browser.desktop
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/figma=figma-linux.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-XV1WVW.desktop
+application/mbox=thunderbird.desktop
+message/rfc822=userapp-Thunderbird-XV1WVW.desktop
+application/x-extension-eml=userapp-Thunderbird-XV1WVW.desktop
+x-scheme-handler/mailto=exo-mail-reader.desktop;evolution.desktop;userapp-Thunderbird-XV1WVW.desktop;
+message/rfc822=userapp-Thunderbird-XV1WVW.desktop;
+application/x-extension-eml=userapp-Thunderbird-XV1WVW.desktop;
+
+[Added Associations]
+video/x-matroska=vlc.desktop;
+image/jpeg=feh.desktop;
+video/mp4=vlc.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+application/pdf=google-chrome.desktop;chromium.desktop;org.gnome.Evince.desktop;

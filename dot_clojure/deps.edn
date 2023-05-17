@@ -1,0 +1,9 @@
+{
+ :deps    {djblue/portal              {:mvn/version "0.35.1"}
+           com.lambdaisland/classpath {:mvn/version "0.4.44"}}
+ :aliases {
+           ;; Add cross-project aliases here
+           :outdated {:replace-deps {olical/depot {:mvn/version "2.3.0"}}
+                      :main-opts    ["-m" "depot.outdated.main"]}
+           }
+ }
