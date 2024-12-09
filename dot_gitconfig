@@ -9,7 +9,7 @@
 	ui = auto
 [core]
 	# pager = delta
-	excludesfile = /home/andrea/.gitignore
+	excludesfile = $HOME/.gitignore
 	autocrlf = input
 
 [alias]
