@@ -8,7 +8,7 @@ color = "0xffffff"
 duration = 0
 
 [shell]
-program = "/opt/homebrew/bin/fish"
+program = "/usr/bin/fish"
 
 [cursor]
 style = "Block"
