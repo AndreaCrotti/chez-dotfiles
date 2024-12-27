@@ -1,4 +1,4 @@
-function g --wraps=git --description 'alias g=git'
-  git $argv
+function g --wraps=ghostty --description 'alias g=ghostty'
+  ghostty $argv
         
 end

@@ -1,4 +1,4 @@
-set PATH ~/scripts ~/.local/bin ~/.cargo/bin ~/.jenv/bin /var/lib/snapd/snap/bin ~/.config/emacs/bin ~/.screenlayout ~/scripts ~/.babashka/bbin/bin ~/go/bin $PATH
+set PATH ~/scripts ~/.local/bin ~/.cargo/bin /var/lib/snapd/snap/bin ~/.config/emacs/bin ~/.screenlayout ~/scripts ~/.babashka/bbin/bin ~/go/bin $PATH
 
 if status is-interactive
     if test -e /opt/asdf-vm/asdf.fish
