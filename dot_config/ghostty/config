@@ -1,5 +1,5 @@
-theme=Dracula+
+theme=tokyonight
 command=/usr/bin/fish
-font-size=12
+font-size=10
 window-padding-x=0
 window-padding-y=0
