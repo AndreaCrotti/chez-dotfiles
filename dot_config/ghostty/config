@@ -1,5 +1,7 @@
-theme=tokyonight
-command=/usr/bin/fish
+command=fish
 font-size=10
+gtk-titlebar=false
+shell-integration=fish
+theme=tokyonight
 window-padding-x=0
 window-padding-y=0
