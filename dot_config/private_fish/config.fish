@@ -1,9 +1,6 @@
 set PATH ~/scripts ~/.local/bin ~/.cargo/bin /var/lib/snapd/snap/bin ~/.config/emacs/bin ~/.screenlayout ~/scripts ~/.babashka/bbin/bin ~/go/bin $PATH
 
 if status is-interactive
-    if test -e /opt/asdf-vm/asdf.fish
-        source /opt/asdf-vm/asdf.fish
-    end
     direnv hook fish | source
     atuin init fish | source
     cowsay (fortune)
