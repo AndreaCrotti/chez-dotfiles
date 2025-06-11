@@ -195,7 +195,3 @@ format = '\[[$symbol($version)]($style)\]'
 
 [solidity]
 format = '\[[$symbol($version)]($style)\]'
-
-[clojure]
-format = "via [🔮 $version](blue bold) "
-detect_files = ["project.clj", "deps.edn", "build.boot", "shadow-cljs.edn"]
