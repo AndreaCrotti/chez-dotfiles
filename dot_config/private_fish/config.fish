@@ -1,4 +1,4 @@
-set PATH ~/scripts ~/.local/bin ~/.cargo/bin /var/lib/snapd/snap/bin ~/.config/emacs/bin ~/.screenlayout ~/scripts ~/.babashka/bbin/bin ~/go/bin $PATH
+set PATH ~/scripts ~/.local/bin ~/.cargo/bin /var/lib/snapd/snap/bin ~/.config/emacs/bin ~/.screenlayout ~/scripts ~/.babashka/bbin/bin ~/go/bin ~/.fly/bin/ ~/.atuin/bin /usr/local/bin $PATH
 
 if status is-interactive
     direnv hook fish | source
