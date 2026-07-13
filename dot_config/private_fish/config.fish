@@ -11,3 +11,11 @@ if status is-interactive
 end
 
 set LSP_USE_PLISTS true
+
+alias b 'bruno --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto'
+alias e emacs
+alias g ghostty
+alias ls exa
+alias p python
+alias v nvim
+alias z zellij

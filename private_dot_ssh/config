@@ -1,9 +1,5 @@
 # -*- mode: conf -*-
 
-# this is an example to generate at syntax level a gateway/remote access
-# Host */*
-#      ProxyCommand ssh ${$(dirname %h)/\%%/@} nc -w5 ${$(basename %h)#*%%} %p
-
 Host *
      ControlPath ~/.ssh/master-%r@%h:%p
      ControlMaster auto
