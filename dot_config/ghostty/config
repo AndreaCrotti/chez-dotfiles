@@ -1,7 +1,7 @@
 command=fish
-font-size=10
+font-size=14
 gtk-titlebar=false
 shell-integration=fish
-theme=tokyonight
+theme=Catppuccin Mocha
 window-padding-x=0
 window-padding-y=0
