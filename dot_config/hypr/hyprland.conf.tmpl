@@ -5,7 +5,12 @@ source = ~/.config/hypr/mocha.conf
 ### MONITORS ###
 ################
 
-monitor=,preferred,auto,auto
+{{- if eq .chezmoi.hostname "nuc" }}
+monitor=HDMI-A-1,preferred,0x0,1.2
+monitor=HDMI-A-2,preferred,auto,1.2
+{{- else }}
+monitor=,preferred,auto,1
+{{- end }}
 
 ###################
 ### MY PROGRAMS ###
