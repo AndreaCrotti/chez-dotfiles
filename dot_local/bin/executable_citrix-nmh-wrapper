@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Citrix's wfica crashes (SIGSEGV in EglWindow::load_egl) probing OpenGL/EGL
+# under native Wayland. Forcing XWayland for the Citrix launch chain avoids it.
+export GDK_BACKEND=x11
+exec /opt/Citrix/ICAClient/NativeMessagingHost "$@"

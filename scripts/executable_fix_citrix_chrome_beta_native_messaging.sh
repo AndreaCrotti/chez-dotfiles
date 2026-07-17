@@ -11,11 +11,11 @@ manifest_dir="$HOME/.config/google-chrome-beta/NativeMessagingHosts"
 manifest_path="$manifest_dir/com.citrix.workspace.native.json"
 
 mkdir -p "$manifest_dir"
-cat > "$manifest_path" <<'EOF'
+cat > "$manifest_path" <<EOF
 {
   "name": "com.citrix.workspace.native",
   "description": "Launch NMH",
-  "path": "/opt/Citrix/ICAClient/NativeMessagingHost",
+  "path": "$HOME/.local/bin/citrix-nmh-wrapper",
   "type": "stdio",
   "allowed_origins": [ "chrome-extension://dbdlmgpfijccjgnnpacnamgdfmljoeee/", "chrome-extension://pmdpflpcmcomdkocbehamllbfkdgnalf/" ]
 }
