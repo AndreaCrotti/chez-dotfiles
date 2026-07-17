@@ -1,6 +1,7 @@
 command=fish
 font-size=14
 gtk-titlebar=false
+mouse-scroll-multiplier=0.5
 shell-integration=fish
 theme=Catppuccin Mocha
 window-padding-x=0

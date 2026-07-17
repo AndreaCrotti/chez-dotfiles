@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=env GDK_BACKEND=x11 /opt/Citrix/ICAClient/wfica %f
+MimeType=application/x-ica;
+Name=wfica
+NoDisplay=true
+Type=Application
