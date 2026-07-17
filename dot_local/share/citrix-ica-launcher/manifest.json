@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Citrix ICA Launcher",
+  "version": "1.0",
+  "description": "Detects Citrix ICA launch files in network responses and hands them to a native host to launch wfica.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs/Zv2as3lXsYLbnZVHRyHzSxMfK2pKWC/ixpNNjN/lXq11fKm8Y+bHN9DJ9vJuJgFRqygUlcys+6kWlrcOvQiWDRYyZY71u1OJSLx3UCQUczlJBY6A8bfHhn2J0gf+7HITJQJW9EjDa5uKrDDLGugqwUX9xU92gLFqmZQfWvH4ISQ9Tw6E/9wf2H0XNiINEn0qZGP7Ud2Ry7ibkDIFpbrmRJ9Yp1nTn7sa3yBirij7Nw4x2NI/nJlxvraSKZIoW8qRa44uQsYS+5iZtOVaveN5w+hbSaWokXFLa+6BZPFWPNVQSlBGzGv6xiGDww6DNfYmHGNVZF/7+IFDXlUiob/QIDAQAB",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["webRequest", "downloads", "nativeMessaging"],
+  "host_permissions": ["<all_urls>"]
+}

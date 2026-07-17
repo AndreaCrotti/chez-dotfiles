@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+import json
+import struct
+import subprocess
+import sys
+
+WFICA = "/opt/Citrix/ICAClient/wfica"
+
+
+def read_message():
+    raw_len = sys.stdin.buffer.read(4)
+    if len(raw_len) < 4:
+        return None
+    length = struct.unpack("<I", raw_len)[0]
+    return json.loads(sys.stdin.buffer.read(length).decode("utf-8"))
+
+
+def send_message(payload):
+    encoded = json.dumps(payload).encode("utf-8")
+    sys.stdout.buffer.write(struct.pack("<I", len(encoded)))
+    sys.stdout.buffer.write(encoded)
+    sys.stdout.buffer.flush()
+
+
+def main():
+    message = read_message()
+    if not message or "path" not in message:
+        send_message({"ok": False, "error": "no path"})
+        return
+    # start_new_session detaches wfica so it survives Chrome closing the pipe.
+    subprocess.Popen([WFICA, message["path"]], start_new_session=True)
+    send_message({"ok": True})
+
+
+def _selftest():
+    payload = {"path": "/tmp/test.ica"}
+    encoded = json.dumps(payload).encode("utf-8")
+    framed = struct.pack("<I", len(encoded)) + encoded
+    length = struct.unpack("<I", framed[:4])[0]
+    assert json.loads(framed[4 : 4 + length].decode("utf-8")) == payload
+    print("ok")
+
+
+if __name__ == "__main__":
+    if "--selftest" in sys.argv:
+        _selftest()
+    else:
+        main()
