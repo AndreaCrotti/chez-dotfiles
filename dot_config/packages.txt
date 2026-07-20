@@ -21,6 +21,7 @@ aws-cli-v2
 base
 base-devel
 bash-completion
+bat
 bind
 bitwarden
 blender
@@ -62,6 +63,8 @@ dmenu
 dnsmasq
 docker
 docker-compose
+duf
+dust
 elixir
 emacs-nativecomp
 erlang
@@ -109,6 +112,7 @@ hunspell
 hunspell-en_gb
 hunspell-en_us
 hwinfo
+hyperfine
 hyprland
 i3-wm
 i3blocks
@@ -236,6 +240,7 @@ sbcl
 sbt
 scapy
 screen
+sd
 shellharden
 shfmt
 sloccount

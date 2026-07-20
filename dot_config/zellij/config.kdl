@@ -290,8 +290,8 @@ theme "dracula"
 // that will be used by default if this option is not set.
 // Examples:
 //
-// copy_command "xclip -selection clipboard" // x11
-// copy_command "pbcopy"                     // osx
+// copy_command "xclip -selection clipboard" // x11/
+/ copy_command "pbcopy"                     // osx
 
 copy_command "wl-copy"
 

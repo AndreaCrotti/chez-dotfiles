@@ -17,8 +17,11 @@ end
 set LSP_USE_PLISTS true
 set -gx EDITOR nvim
 set -gx RIPGREP_CONFIG_PATH ~/.config/ripgrep/ripgreprc
+set -gx FZF_CTRL_T_OPTS "--preview 'bat --style=numbers --color=always --line-range=:500 {}'"
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 alias b 'bruno --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto'
+alias cat bat
 alias e emacs
 alias g ghostty
 alias ls 'eza --icons'
