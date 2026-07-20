@@ -67,7 +67,7 @@ emacs-nativecomp
 erlang
 evince
 evolution
-exa
+eza
 fd
 firefox
 fish
@@ -265,7 +265,6 @@ tidy
 tig
 tigervnc
 tldr
-tmux
 traceroute
 transcode
 transmission-gtk
@@ -300,6 +299,7 @@ wget
 wireguard-tools
 wireshark-cli
 wireshark-qt
+wl-clipboard
 xclip
 xdotool
 xf86-input-evdev
@@ -319,4 +319,5 @@ yarn
 zaproxy
 zig
 zls
+zoxide
 zsh

@@ -10,6 +10,14 @@
 [core]
 	excludesfile = $HOME/.gitignore
 	autocrlf = input
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	line-numbers = true
 
 [alias]
 	aa = add --all
