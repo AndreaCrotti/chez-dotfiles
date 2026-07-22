@@ -290,10 +290,15 @@ theme "dracula"
 // that will be used by default if this option is not set.
 // Examples:
 //
-// copy_command "xclip -selection clipboard" // x11/
-/ copy_command "pbcopy"                     // osx
+// copy_command "pbcopy" // osx
 
-copy_command "wl-copy"
+{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+copy_command "xclip -selection clipboard" // WSL
+{{- else if env "WAYLAND_DISPLAY" }}
+copy_command "wl-copy" // wayland
+{{- else }}
+copy_command "xclip -selection clipboard" // x11
+{{- end }}
 
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
