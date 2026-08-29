@@ -1,0 +1,7 @@
+{
+  "name": "com.citrix.workspace.native",
+  "description": "Launch NMH",
+  "path": "/opt/Citrix/ICAClient/NativeMessagingHost",
+  "type": "stdio",
+  "allowed_origins": [ "chrome-extension://dbdlmgpfijccjgnnpacnamgdfmljoeee/" ]
+}
