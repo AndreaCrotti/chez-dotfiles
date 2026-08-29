@@ -1,3 +1,4 @@
+
 -- Hyprland config. Docs: https://wiki.hypr.land/Configuring/Start/
 -- LSP completion: point workspace.library at /usr/share/hypr/stubs
 
@@ -35,13 +36,13 @@ local surface2 = "rgb(585b70)"
 -------------------
 
 hl.on("hyprland.start", function()
-    for _, cmd in ipairs({ "waybar", "swaync", "hyprpaper", "hypridle", "dropbox" }) do
+    for _, cmd in ipairs({ "waybar", "swaync", "hyprpaper", "hypridle", "dropbox", "nm-applet" }) do
         hl.exec_cmd(cmd)
     end
 
-    hl.exec_cmd("emacs", { workspace = 1, silent = true })
-    hl.exec_cmd(terminal, { workspace = 1, silent = true })
-    hl.exec_cmd("google-chrome-beta", { workspace = 2, silent = true })
+    hl.exec_cmd("emacs", { workspace = 1})
+    hl.exec_cmd(terminal, { workspace = 1})
+    hl.exec_cmd("google-chrome-beta", { workspace = 2})
 end)
 
 -------------------------------
