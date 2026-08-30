@@ -2,98 +2,142 @@
 
 * {
     font-family: "MesloLGS Nerd Font Mono Bold";
-    font-size: 16px;
+    font-size: 15px;
     min-height: 0;
     font-weight: bold;
 }
 
 window#waybar {
-    background: transparent;
     background-color: @crust;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    border-bottom: 1px solid @mantle;
 }
 
 #window {
-    margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    color: @overlay1;
+    padding: 0 12px;
 }
 
 button {
-    box-shadow: inset 0 -3px transparent;
+    box-shadow: none;
     border: none;
     border-radius: 0;
 }
 
-button:hover {
-    background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+/* ---------------- workspaces: flush segment on the far left ---------------- */
+
+#workspaces {
+    background-color: @surface0;
+    margin: 4px 0;
+    padding: 0 4px;
+    border-radius: 0 8px 8px 0;
 }
 
 #workspaces button {
-    padding: 0 4px;
+    padding: 0 9px;
+    color: @overlay1;
+}
+
+#workspaces button:hover {
+    background: inherit;
+    color: @text;
 }
 
 #workspaces button.focused {
-    background-color: rgba(0, 0, 0, 0.3);
     color: @rosewater;
-    border-top: 2px solid @rosewater;
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
     color: @mauve;
-    border-top: 2px solid @mauve;
+    font-weight: bold;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @red;
+    color: @crust;
 }
+
+/* ---------------- right cluster: powerline-chained segments ---------------- */
 
 #pulseaudio,
-#clock,
 #battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#wireplumber,
-#tray,
+#clock,
 #network,
-#mode,
-#load,
-#scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
-}
-
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+#temperature {
+    padding: 0 12px;
+    color: @text;
 }
 
 #network {
+    background-color: @surface0;
+}
+
+#pulseaudio {
+    background-color: @surface1;
+}
+
+#battery {
+    background-color: @surface0;
+}
+
+#temperature {
+    background-color: @surface1;
+}
+
+#clock {
+    background-color: @mauve;
+    color: @crust;
+    border-radius: 0 8px 8px 0;
+    padding: 0 14px;
+}
+
+#battery.warning {
     color: @yellow;
-    border-bottom: 2px solid @yellow;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+/* powerline triangle separators: foreground = segment being left,
+   background = segment being entered, so the glyph reads as one
+   continuous chain rather than a gap between boxes */
+
+#custom-sep1,
+#custom-sep2,
+#custom-sep3,
+#custom-sep4,
+#custom-sep5 {
+    font-size: 21px;
+    padding: 0;
+    margin: 0;
+}
+
+#custom-sep1 {
+    color: @surface0;
+    background-color: @surface1;
+}
+
+#custom-sep2 {
+    color: @surface1;
+    background-color: @surface0;
+}
+
+#custom-sep3 {
+    color: @surface0;
+    background-color: @surface1;
+}
+
+#custom-sep4 {
+    color: @surface1;
+    background-color: @mauve;
+}
+
+#custom-sep5 {
+    color: @mauve;
+    background-color: transparent;
 }
 
 #idle_inhibitor {
@@ -105,19 +149,13 @@ button:hover {
     color: @red;
 }
 
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+#tray {
+    padding: 0 12px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
     margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
 }
 
 #custom-vpn {

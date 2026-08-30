@@ -3,9 +3,26 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock", "temperature", "tray"],
+  "modules-right": [
+    "network",
+    "custom/sep1",
+    "pulseaudio",
+    "custom/sep2",
+    "battery",
+    "custom/sep3",
+    "temperature",
+    "custom/sep4",
+    "clock",
+    "custom/sep5",
+    "tray"
+  ],
+  "custom/sep1": { "format": "", "tooltip": false },
+  "custom/sep2": { "format": "", "tooltip": false },
+  "custom/sep3": { "format": "", "tooltip": false },
+  "custom/sep4": { "format": "", "tooltip": false },
+  "custom/sep5": { "format": "", "tooltip": false },
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "format": "   {:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -24,10 +41,10 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-wifi": "<span size='13000' foreground='#f9e2af'>  </span>{essid}",
+    "format-ethernet": "<span size='13000' foreground='#f9e2af'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000' foreground='#f9e2af'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "temperature": {
@@ -35,11 +52,11 @@
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
-    "format": "{temperatureC}°C {icon}",
+    "format": "<span size='13000' foreground='#fab387'>{icon} </span>{temperatureC}°C",
     "format-icons": ["", "", ""]
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "<span size='13000' foreground='#89b4fa'>{icon} </span> {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", "", " "]
