@@ -53,7 +53,7 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "<span size='13000' foreground='#fab387'>{icon} </span>{temperatureC}°C",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""]
   },
   "pulseaudio": {
     "format": "<span size='13000' foreground='#89b4fa'>{icon} </span> {volume}%",
